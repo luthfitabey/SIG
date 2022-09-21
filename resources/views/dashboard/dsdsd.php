@@ -1,0 +1,6 @@
+@include('dashboard.why')
+    @include('dashboard.statsCount')
+    @include('dashboard.menu')
+    @include('dashboard.event')
+    @include('dashboard.chef')
+    @include('dashboard.gallery')
