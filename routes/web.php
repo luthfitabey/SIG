@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,7 @@ Route::get('/', function () {
     // return view('welcome');
 });
 
+/*
 Auth::routes();
 
 Route::middleware(['auth', 'user-access:user'])->group(function () {
@@ -31,6 +33,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 All Admin Routes List
 --------------------------------------------
 --------------------------------------------*/
+/*
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
   
     Route::get('/admin/home', [HomeController::class, 'admin.adminHome'])->name('admin.home');
@@ -43,4 +46,13 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     // Route::post('pegawai/new', "PegawaiController@store")->name('pgw.new');
     // Route::delete('pegawai/{id}', "PegawaiController@destroy");
 });
-  
+*/
+Auth::routes();
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', function() {
+        return view('home');
+    })->name('home')->middleware('auth');
+    Route::resource('users', \App\Http\Controllers\UserController::class)
+        ->middleware('auth');
+});
+

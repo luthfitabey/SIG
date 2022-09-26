@@ -3,7 +3,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Pola Ruang</h2>
+          <h1>Pola Ruang</h1>
           <p>Pelajari tentang <span>Pola Ruang</span></p>
         </div>
 
