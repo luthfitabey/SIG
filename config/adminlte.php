@@ -259,6 +259,14 @@ return [
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
+    'map_url' => 'map',
+    'map_slug_url' => 'map/{slug}',
+    'centre_point_url' => 'centre-point',
+    'category_url' => 'category',
+    'space_url' => 'space',
+    'centre_point_data_url' => 'centrepoint/data',
+    'category_data_url' => 'categories/data',
+    'spaces_url' => '/spaces/data',
     'profile_url' => false,
 
     /*
@@ -311,78 +319,91 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
+        // [
+        //     'text'        => 'pages',
+        //     'url'         => 'admin/pages',
+        //     'icon'        => 'far fa-fw fa-file',
+        //     'label'       => 4,
+        //     'label_color' => 'success',
+        // ],
         ['header' => 'account_settings'],
         [
             'text' => 'User',
             'url'  => '/users',
             'icon'  => 'fa fa-users',
         ],
+        // [
+        //     'text' => 'change_password',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'fas fa-fw fa-lock',
+        // ],
+    
+        ['header' => 'Tata Ruang'],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Pemetaan Lahan',
+            'icon'    => 'far fa-fw fa-file',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Koordinat Lahan',
+                    'url'  => '/centre-point',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Kawasan Tata Ruang',
+                    'url'  => '/space',
                 ],
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Peta Tata Ruang',
+                    'url'  => '/map',
                 ],
+                // [
+                //     'text'    => 'Penataan Lahan',
+                //     'url'     => '#',
+                //     'submenu' => [
+                //         [
+                //             'text' => 'Peta Tata Ruang',
+                //             'url'  => '/map',
+                //         ],
+                //         [
+                //             'text' => 'Data Pemetaan Ruang',
+                //             'url'  => '/centrepoint/data',
+                //         ],
+                //         [
+                //             'text' => 'Data Ruang',
+                //             'url'  => '/spaces/data',
+                //         ],
+                //         // [
+                //         //     'text'    => 'level_two',
+                //         //     'url'     => '#',
+                //         //     'submenu' => [
+                //         //         [
+                //         //             'text' => 'level_three',
+                //         //             'url'  => '#',
+                //         //         ],
+                //         //         [
+                //         //             'text' => 'level_three',
+                //         //             'url'  => '#',
+                //         //         ],
+                //         //     ],
+                //         // ],
+                //     ],
+                // ],
             ],
         ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+        // [
+        //     'text'       => 'important',
+        //     'icon_color' => 'red',
+        //     'url'        => '#',
+        // ],
+        // [
+        //     'text'       => 'warning',
+        //     'icon_color' => 'yellow',
+        //     'url'        => '#',
+        // ],
+        // [
+        //     'text'       => 'information',
+        //     'icon_color' => 'cyan',
+        //     'url'        => '#',
+        // ],
     ],
 
     /*
@@ -452,6 +473,11 @@ return [
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '//unpkg.com/leaflet@1.8.0/dist/leaflet.css',
                 ],
             ],
         ],
