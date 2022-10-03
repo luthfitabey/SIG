@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel - Leaflet</title>
+    <title>Peta Kawasan Tata Ruang Kota Mojokerto</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 

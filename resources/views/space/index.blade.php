@@ -31,7 +31,8 @@ css dan js yang membedakannya ada pada ajax server side di bagian push('javascri
                             <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th>Nama Space</th>
+                                    <th>Nama Kawasan</th>
+                                    <th>Alamat</th>
                                     <th>Opsi</th>
                                 </tr>
                             <tbody></tbody>
@@ -70,6 +71,9 @@ css dan js yang membedakannya ada pada ajax server side di bagian push('javascri
                     },
                     {
                         data: 'name'
+                    },
+                    {
+                        data: 'address'
                     },
                     {
                         data: 'action'

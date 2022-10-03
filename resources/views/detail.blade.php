@@ -46,6 +46,11 @@
                         </p>
 
                         <p>
+                        <h4><strong>Alamat :</strong></h4>
+                        <h5>{{ $spaces->address }}</h5>
+                        </p>
+
+                        <p>
                         <h4><strong>Keterangan Kawasan :</strong></h4>
                         <p>{{ $spaces->content }}</p>
                         </p>

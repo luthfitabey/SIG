@@ -21,43 +21,20 @@ Route::get('/', function () {
     return view('dashboard.dash');
     // return view('welcome');
 });
+
     //khusus map
 Route::get('/map',[App\Http\Controllers\MapController::class,'index'])->name('map.index');
 Route::get('/map/{slug}',[App\Http\Controllers\MapController::class,'show'])->name('map.show');
 
-/*
-Auth::routes();
+//show data
+Route::get('/mapData',[App\Http\Controllers\LahanController::class,'index'])->name('mapData.index');
+Route::get('/mapData/data',[DataController::class,'mapData'])->name('map-data');
 
-Route::middleware(['auth', 'user-access:user'])->group(function () {
-  
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
-});
-  
-/*------------------------------------------
---------------------------------------------
-All Admin Routes List
---------------------------------------------
---------------------------------------------*/
-/*
-Route::middleware(['auth', 'user-access:admin'])->group(function () {
-  
-    Route::get('/admin/home', [HomeController::class, 'admin.adminHome'])->name('admin.home');
-    //  Route::get('/admin/pegawai', 'PegawaiController@index');
-
-    // Route::resource('pegawai', 'PegawaiController');
-    // Route::get('pgw_export', 'PegawaiController@exportFile');
-    // Route::post('import_pgw', 'PegawaiController@import');
-    // Route::get('pegawai/create', 'PegawaiController@create');
-    // Route::post('pegawai/new', "PegawaiController@store")->name('pgw.new');
-    // Route::delete('pegawai/{id}', "PegawaiController@destroy");
-});
-*/
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
     //dashboard admin lte
     Route::get('/home', function() {
         return view('home');})->name('home');
-
     //edit user
     Route::resource('users', \App\Http\Controllers\UserController::class);
     

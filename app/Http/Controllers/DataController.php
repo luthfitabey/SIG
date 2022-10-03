@@ -35,4 +35,16 @@ class DataController extends Controller
         ->rawColumns(['action'])
         ->toJson();
     }
+    public function mapData()
+    {
+        // Method ini untuk menampilkan data dari tabel spaces
+        // ke dalam datatables kita juga menambahkan column untuk menampilkan button
+        // action
+        $spaces = Space::orderBy('created_at','DESC');
+        return datatables()->of($spaces)
+        // ->addColumn('action','space.action')
+        ->addIndexColumn()
+        // ->rawColumns(['action'])
+        ->toJson();
+    }
 }

@@ -48,6 +48,7 @@ class SpaceController extends Controller
         // Lakukan validasi data
         $this->validate($request, [
             'name' => 'required',
+            'address' => 'required',
             'content' => 'required',
             'image' => 'image|mimes:png,jpg,jpeg',
             'location' => 'required'
@@ -65,6 +66,7 @@ class SpaceController extends Controller
         // Memasukkan nilai untuk masing-masing field pada tabel space berdasarkan inputan dari
         // form create 
         $spaces->name = $request->input('name');
+        $spaces->address = $request->input('address');
         $spaces->slug = Str::slug($request->name, '-');
         $spaces->location = $request->input('location');
         $spaces->content = $request->input('content');
@@ -121,6 +123,7 @@ class SpaceController extends Controller
         // Menjalankan validasi
         $this->validate($request, [
             'name' => 'required',
+            'address' => 'required',
             'content' => 'required',
             'image' => 'image|mimes:png,jpg,jpeg',
             'location' => 'required'
@@ -146,6 +149,7 @@ class SpaceController extends Controller
         // Lakukan Proses update data ke tabel space
         $space->update([
             'name' => $request->name,
+            'address' => $request->address,
             'location' => $request->location,
             'content' => $request->content,
             'slug' => Str::slug($request->name, '-'),

@@ -31,20 +31,27 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-header">Edit Space</div>
+                    <div class="card-header">Edit Tata Ruang</div>
                     <div class="card-body">
                         <form action="{{ route('space.update',$space) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="form-group mb-3">
-                                <label for="">Nama space</label>
+                                <label for="">Nama Kawasan</label>
                                 <input type="text" name="name" value="{{ $space->name }}" class="form-control @error('name') is-invalid @enderror" id="">
                                 @error('name')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group mb-3">
-                                <label for="">Foto space</label><br>
+                                <label for="">Alamat</label>
+                                <input type="text" name="address" value="{{ $space->address }}" class="form-control @error('address') is-invalid @enderror" id="">
+                                @error('address')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="">Foto Kawasan</label><br>
                                 <img id="previewImage" class="mb-2" src="{{ $space->getImage() }}" width="100%" alt="">
                                 <input type="file" name="image" class="form-control @error('image') is-invalid @enderror"
                                     id="image">

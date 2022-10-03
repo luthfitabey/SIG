@@ -6,7 +6,7 @@
           <h2 data-aos="fade-up">Portal Informasi Tata Ruang Kota Mojokerto <br>Pintar Moker</h2>
           <p data-aos="fade-up" data-aos-delay="100">Pintar Moker adalah Sistem Informasi Tata Ruang dan Bangunan yang mudah diakses oleh Masyarakat, yang berfungsi sebagai perencanaan, pemanfaatan dan pengendalian tata ruang</p>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="#book-a-table" class="btn-book-a-table">Lihat</a>
+            <a href="{{ route('map.index') }}" class="btn-book-a-table">Lihat</a>
             <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Tonton Tutorial</span></a>
           </div>
         </div>

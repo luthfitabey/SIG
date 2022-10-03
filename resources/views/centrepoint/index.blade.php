@@ -1,10 +1,10 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Centre Point')
+@section('title', 'Titik Koordinat Kota')
 
 @section('content_header')
-    <h1 class="m-0 text-dark">Centre Point</h1>
+    <h1 class="m-0 text-dark">Titik Koordinat</h1>
 
 @stop
 @section('style-css')
